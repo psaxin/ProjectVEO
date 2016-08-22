@@ -19,6 +19,10 @@ namespace ProjectVEO.Controllers
 
             return View();
         }
+        public ActionResult Upload()
+        {
+            return View();
+        }
 
         public ActionResult Contact()
         {
