@@ -17,12 +17,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("VEO", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @* Alla "bilder" i navigationsbaren är anchors med en button som bildar knappen *@
-                    <a href='@Url.Action("Index", "Home")'>
+                    <a href='@Url.Action("Overview", "Profile")'>
                         <button style="border-radius:8px; background:#339933;height:100px;width:100px;">You</button>
                         </a>
                     <a href='@Url.Action("Upload", "Home")'>
