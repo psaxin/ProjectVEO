@@ -240,6 +240,7 @@ th {
   }
   .navbar {
     display: none;
+
   }
   .btn > .caret,
   .dropup > .btn > .caret {
@@ -1582,6 +1583,7 @@ pre code {
   overflow-y: scroll;
 }
 .container {
+ 
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -3972,6 +3974,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-left: -1px;
 }
 .nav {
+
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -4164,6 +4167,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
 }
 .navbar {
+
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
@@ -4216,7 +4220,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
-  max-height: 340px;
+  
+    max-height: 340px;
 }
 @media (max-device-width: 480px) and (orientation: landscape) {
   .navbar-fixed-top .navbar-collapse,
@@ -4228,6 +4233,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .container-fluid > .navbar-header,
 .container > .navbar-collapse,
 .container-fluid > .navbar-collapse {
+    
   margin-right: -15px;
   margin-left: -15px;
 }
