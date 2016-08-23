@@ -21,10 +21,20 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+                    @* Alla "bilder" i navigationsbaren är anchors med en div som bildar knappen *@
+                    <a href='@Url.Action("Index", "Home")'>
+                        <button style="border-radius:8px; background:#339933;height:100px;width:100px;">You</button>
+                        @*<div style="border-radius:8px; background:#339933;height:100px;">
+                          
+                        </div>*@
+                        </a>
+                    <a href='@Url.Action("Upload", "Home")'>
+                        <button style="border-radius:8px; background:#3399ff;height:100px;width:100px;">Upload</button>
+                        </a>
+                    <a href='@Url.Action("Contact", "Home")'>
+                        <button style="border-radius:8px; background:#ff80aa;height:100px;width:100px;">Market</button>
+                        </a>
+</ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
