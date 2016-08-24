@@ -3,32 +3,52 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+@*<!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>_NavBarProfile</title>
 </head>
-<body>
+<body>*@
     @* Ska flyttas till css fil *@
+@model ProjectVEO.Models.ProfileModel
+
+@*@@using (Html.BeginForm("Profile"))
+{*@
+
     <div style="margin-top:60px;">
-        <a href='@Url.Action("Overview", "Profile")'>
-            <button style="border-radius:8px;width:100px;">Overview</button>
+        <a href='@Url.Action("Overview", "Profile")' >
+            <button style="border-radius:8px;width:100px;" id="1" >Overview</button>
             </a>
-        <a href='@Url.Action("Uploads", "Profile")'>
-            <button style="border-radius:8px; width:100px;">Uploads</button>
+        <a href='@Url.Action("Uploads", "Profile")' >
+            <button style="border-radius:8px; width:100px;" id="2" >Uploads</button>
             </a>
-        <a href='@Url.Action("Downloads", "Profile")'>
-            <button style="border-radius:8px;width:100px;">Downloads</button>
+        <a href='@Url.Action("Downloads", "Profile")' >
+            <button style="border-radius:8px;width:100px;"id="3">Downloads</button>
             </a>
-        <a href='@Url.Action("Widgets", "Profile")'>
-            <button style="border-radius:8px;width:100px;">My Widgets</button>
+        <a href='@Url.Action("Widgets", "Profile")' >
+            <button style="border-radius:8px;width:100px;" id="4">My Widgets</button>
             </a>
         <a href='@Url.Action("Account", "Profile")'>
-            <button style="border-radius:8px;width:100px;">Account</button>
+            <button style="border-radius:8px;width:100px;" id="5">Account</button>
             </a>
+        @* kan tas bort, endast debugging *@
+        @Html.DisplayTextFor(model => model.currentTab)
 </div>
     @RenderBody()
-</body>
-</html>
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+       
+            var col = document.getElementById("@(Model.currentTab)");
+            col.style.color = "red";
+     
+        @*function alterSelected() {
+            var col = document.getElementById("@(Model.currentTab)");
+            col.style.color = "red";
+            //$("#overview").
+        }*@
+        </script>
+
+@*</body>
+</html>*@

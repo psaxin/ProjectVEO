@@ -9,27 +9,36 @@ namespace ProjectVEO.Controllers
     public class ProfileController : Controller
     {
         
-        public ActionResult Account()
-        {
-            return View();
-        }
+    
         public ActionResult Overview()
         {
-            //var model = new ProfileModel();
-            //model.currentTab = 1;
-            return View();
+            var model = new ProfileModel();
+            model.currentTab = 1;
+            return View(model);
         }
         public ActionResult Uploads()
         {
-            return View();
+            var model = new ProfileModel();
+            model.currentTab = 2;
+            return View(model);
         }
         public ActionResult Downloads()
         {
-            return View();
+            var model = new ProfileModel();
+            model.currentTab = 3;
+            return View(model);
         }
         public ActionResult Widgets()
         {
-            return View();
+            var model = new ProfileModel();
+            model.currentTab = 4;
+            return View(model);
+        }
+        public ActionResult Account()
+        {
+            var model = new ProfileModel();
+            model.currentTab = 5;
+            return View(model);
         }
     }
 }
